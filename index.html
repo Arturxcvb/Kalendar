@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Календарь событий</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Календарь событий</h1>
+        <form id="event-form">
+            <textarea id="event-description" placeholder="Описание события" required></textarea>
+            <input type="date" id="event-date" required>
+            <input type="time" id="event-time" required> <!-- Добавлено поле для выбора времени -->
+            <select id="event-type" required>
+                <option value="" disabled selected>Выберите тип события</option>
+                <option value="meeting">Рабочая встреча</option>
+                <option value="holiday">Праздник</option>
+                <option value="birthday">День рождения</option>
+                <option value="other">Другое</option>
+            </select>
+            <button type="submit">Добавить событие</button>
+        </form>
+        <div id="event-list" class="event-list"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
